@@ -1,4 +1,4 @@
-class PriceChecker::Items
+class MovieOpenings::Items
 attr_accessor :name, :price, :description
 @@all = []
 

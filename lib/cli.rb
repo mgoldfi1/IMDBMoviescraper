@@ -1,5 +1,5 @@
 #CLI controller
-class PriceChecker::CLI
+class MovieOpenings::CLI
 
   def call
 

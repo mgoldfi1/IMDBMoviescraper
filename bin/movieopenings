@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require './lib/movie_openings'
+require 'pry'
+
+scraper = Scraper.new
+scraper.opening_week
+scraper.in_theaters

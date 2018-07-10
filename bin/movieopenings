@@ -3,6 +3,12 @@
 require './lib/movie_openings'
 require 'pry'
 
-scraper = Scraper.new
-scraper.opening_week
-scraper.in_theaters
+puts "Welcome to the IMDB movieopenings gem"
+puts "If you would like to see a list of movies opening this week, please type 1.  Otherwise, type 2 to display a list of movies that are currently in theaters"
+MovieOpenings::CLI.new.call
+
+
+
+# scraper = Scraper.new
+# scraper.opening_week
+# scraper.in_theaters

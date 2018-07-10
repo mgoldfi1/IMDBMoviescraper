@@ -10,14 +10,12 @@ search.css(".list.detail.sub-list")[0].css(".overview-top").each do |movie|
     search_hash = {}
     search_hash[:name] = movie.css("h4 a").text
     search_hash[:runtime] =  movie.css("p time").text
-    search_hash[:user_rating] = "#{movie.css("span.value").text}/10"
     search_hash[:description] = movie.css(".outline").text.gsub("    ","").gsub("                ","")
 
     #search_hash[:rating] = movie.css("p img").attribute('title').value
     opening << search_hash
 end
 opening
-
 end
 
 def in_theaters

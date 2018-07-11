@@ -20,9 +20,3 @@ when "exit"
   break
 end
 end
-
-
-
-# scraper = Scraper.new
-# scraper.opening_week
-# scraper.in_theaters

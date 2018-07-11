@@ -1,15 +1,12 @@
-# Price::Checker::Cli
+# IMDBMoviescraper
+  This gem scrapes the IMDB website and returns a list of movies and their details based on a user prompt.  The user selects whether they want to see a list of movies that will be released within the next week, or movies that are currently in theaters.  Once the user responds, a list of the movies will automatically be generated and displayed to them.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Price/checker/cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-1
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'Price-checker-cli'
+gem 'IMDBMoviescraper'
 ```
 
 And then execute:
@@ -18,7 +15,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install Price-checker-cli
+    $ gem install IMDBMoviescraper
 
 ## Usage
 
@@ -32,7 +29,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/'mgoldfi1'/Price-checker-cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/'mgoldfi1'/IMDBMoviescraper. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +37,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Price::Checker::Cli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'mgoldfi1'/Price-checker-cli/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Price::Checker::Cli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'mgoldfi1'/IMDBMoviescraper/blob/master/CODE_OF_CONDUCT.md).

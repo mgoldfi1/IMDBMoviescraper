@@ -11,7 +11,7 @@ search.css(".list.detail.sub-list")[0].css(".overview-top").each do |movie|
     search_hash[:name] = movie.css("h4 a").text
     search_hash[:runtime] =  movie.css("p time").text
     search_hash[:description] = movie.css(".outline").text.gsub("    ","").gsub("                ","")
-  #  search_hash[:rating] = movie.css("p img").attribute('title').value unless movie.css("p img").empty?
+    search_hash[:rating] = movie.css("p img").attribute('title').value unless movie.css("p img").empty?
     opening << search_hash
 
 end
@@ -29,8 +29,7 @@ search.css(".list.detail.sub-list")[1].css(".overview-top").each do |movie|
       search_hash[:runtime] =  movie.css("p time").text
       search_hash[:user_rating] = "#{movie.css("span.value").text}/10"
       search_hash[:description] = movie.css(".outline").text.gsub("    ","").gsub("                ","")
-      #search_hash[:trailer] = "https://www.imdb.com#{search.css(".list.detail.sub-list")[1].css(".overview-bottom a").attribute('href').value}"
-      #search_hash[:rating] = movie.css("p img").attribute('title').value
+      search_hash[:rating] = movie.css("p img").attribute('title').value unless movie.css("p img").empty?
       in_theaters << search_hash
   end
   in_theaters

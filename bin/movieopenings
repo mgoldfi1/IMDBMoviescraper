@@ -4,12 +4,23 @@ require './lib/movie_openings'
 require 'pry'
 require 'colorize'
 puts "Welcome to the IMDB movieopenings gem"
+loop do
 puts "If you would like to see a list of movies opening this week, please type 1.  Otherwise, type 2 to display a list of movies that are currently in theaters"
 user = gets.strip
-MovieOpenings::CLI.new.call_theaters
-# elsif  user == 2
-# MovieOpenings::CLI.new.call_theaters
-# end
+case user
+when "1"
+  puts "\n\n\n\n\n"
+  MovieOpenings::CLI.new.call_opening
+  break
+when "2"
+  MovieOpenings::CLI.new.call_theaters
+  break
+when "exit"
+  puts "Goodbye"
+  break
+end
+end
+
 
 
 # scraper = Scraper.new

@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "Price/checker/cli/version"
+require "./lib/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "Price-checker-cli"
-  spec.version       = Price::Checker::Cli::VERSION
+  spec.name          = "IMDBMoviescraper"
+  spec.version       = MovieOpenings::CLI::VERSION
   spec.authors       = ["'Matthew Goldfine'"]
   spec.email         = ["'mgoldfi1@binghamton.edu'"]
 

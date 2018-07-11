@@ -8,7 +8,7 @@ class MovieOpenings::CLI
       self.class.openings.each_with_index do |x,index|
         puts "\n\n"
         puts "#{index+1}."+"#{x.name}".red
-        puts "Rating:"+"#{x.rating}".green
+        puts "Rating:  ".light_blue+"#{x.rating}".green
         puts "Runtime:".light_blue+" #{x.runtime}"
         puts "Description:".light_blue+"#{x.description}"
       end
@@ -20,7 +20,7 @@ def call_theaters
   self.class.theater.each_with_index do |x,index|
     puts "\n\n"
     puts "#{index+1}."+"#{x.name}".red
-    puts "Rating:"+"#{x.rating}".green
+    puts "Rating:  ".light_blue+"#{x.rating}".green
     puts "Runtime:".light_blue+" #{x.runtime}"
     puts "Description:".light_blue+"#{x.description}"
     puts "User Rating:".light_blue+" #{x.user_rating}"

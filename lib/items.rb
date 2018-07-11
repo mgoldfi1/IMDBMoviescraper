@@ -1,5 +1,5 @@
 class MovieOpenings::Movies
-attr_accessor :name, :runtime, :user_rating, :description
+attr_accessor :name, :runtime, :user_rating, :description, :rating
 @@all = []
 
 def initialize(attributes)

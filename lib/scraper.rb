@@ -12,11 +12,14 @@ search.css(".list.detail.sub-list")[0].css(".overview-top").each do |movie|
     search_hash[:runtime] =  movie.css("p time").text
     search_hash[:description] = movie.css(".outline").text.gsub("    ","").gsub("                ","")
     search_hash[:rating] = movie.css("p img").attribute('title').value unless movie.css("p img").empty?
+      link = movie.css("h4 a").attribute('href').value
+      url = "https://www.imdb.com#{link}"
+      page = Nokogiri::HTML(open(url))
+      search_hash[:stars] = page.css(".credit_summary_item")[2].css(".itemprop").map {|x| x.text} if page.css(".credit_summary_item")[2]
     opening << search_hash
-
+    #binding.pry
 end
 opening
-
 end
 
 def in_theaters

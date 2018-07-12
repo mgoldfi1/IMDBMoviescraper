@@ -11,6 +11,7 @@ class MovieOpenings::CLI
         puts "Rating:  ".light_blue+"#{x.rating}".green if x.rating
         puts "Runtime:".light_blue+" #{x.runtime}"
         puts "Description:".light_blue+"#{x.description}"
+        puts "Starring:".light_blue+"#{x.stars.join(" ")}" if x.stars
       end
   end
 

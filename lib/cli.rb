@@ -1,11 +1,28 @@
 #CLI controller
 class MovieOpenings::CLI
-@@openings = []
-@@theater = []
+
+def call
+  puts "Welcome to the IMDB movieopenings gem"
+  loop do
+  puts "If you would like to see a list of movies opening this week, please type 1.  Otherwise, type 2 to display a list of movies that are currently in theaters.  Type exit to exit the program."
+  user = gets.strip
+  case user
+  when "1"
+    puts "\n\n\n\n\n"
+    call_opening
+  when "2"
+    puts "\n\n\n\n\n"
+    call_theaters
+  when "exit"
+    puts "Goodbye"
+    break
+    end
+  end
+end
+
   def call_opening
-  scraper = Scraper.new
-      scraper.opening_week.each {|movie| @@openings << MovieOpenings::Movies.new(movie)}
-      self.class.openings.each_with_index do |x,index|
+      Scraper.opening_week.each {|movie| MovieOpenings::Movies.new(movie)}
+      MovieOpenings::Movies.find_by_status("opening").each_with_index do |x,index|
         puts "\n\n"
         puts "#{index+1}."+"#{x.name}".red
         puts "Rating:  ".light_blue+"#{x.rating}".green if x.rating
@@ -17,8 +34,8 @@ class MovieOpenings::CLI
 
 
 def call_theaters
-  Scraper.new.in_theaters.each {|movie| @@theater << MovieOpenings::Movies.new(movie)}
-  self.class.theater.each_with_index do |x,index|
+  Scraper.in_theaters.each {|movie| MovieOpenings::Movies.new(movie)}
+  MovieOpenings::Movies.find_by_status("intheaters").each_with_index do |x,index|
     puts "\n\n"
     puts "#{index+1}."+"#{x.name}".red
     puts "Rating:  ".light_blue+"#{x.rating}".green if x.rating
@@ -29,13 +46,7 @@ def call_theaters
   end
 end
 
-def self.openings
-  @@openings
-end
 
-def self.theater
-  @@theater
-end
 
 
 
